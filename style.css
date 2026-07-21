@@ -208,3 +208,28 @@ footer{
 .whatsapp:hover{
     transform:scale(1.1);
 }
+.whatsapp-float{
+    position: fixed !important;
+    right: 25px !important;
+    bottom: 25px !important;
+    width: 70px !important;
+    height: 70px !important;
+    background: #25D366 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,.35) !important;
+    z-index: 999999 !important;
+    transition: .3s;
+}
+
+.whatsapp-float:hover{
+    transform: scale(1.1);
+    background:#1ebe5d !important;
+}
+
+.whatsapp-float img{
+    width:38px;
+    height:38px;
+}
