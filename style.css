@@ -125,3 +125,65 @@ footer{
     padding:35px;
     margin-top:80px;
 }
+.services{
+    padding:100px 8%;
+    background:#ffffff;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.title span{
+    color:#1976D2;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.title h2{
+    font-size:42px;
+    color:#0A2540;
+    margin:15px 0;
+}
+
+.title p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+    color:#666;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    padding:35px;
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.3s;
+    text-align:center;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.icon{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    color:#0A2540;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.7;
+}
