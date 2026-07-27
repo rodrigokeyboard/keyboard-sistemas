@@ -1,1 +1,397 @@
-<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Keyboard Sistemas</title><link rel='stylesheet' href='style.css'></head><body><header><div class='container nav'><h1>Keyboard Sistemas</h1><nav><a href='index.html'>Início</a><a href='empresa.html'>Empresa</a><a href='servicos.html'>Serviços</a><a href='contato.html'>Contato</a><a class='btn' href='orcamento.html'>Orçamento</a></nav></div></header><section class='hero'><div class='container'><h2>Tecnologia que impulsiona o crescimento da sua empresa.</h2><p>Sites, sistemas, automação e IA.</p><a class='btn' href='orcamento.html'>Solicitar orçamento</a></div></section><section class='container cards'><div class='card'><h3>Sistemas</h3></div><div class='card'><h3>Sites</h3></div><div class='card'><h3>Automação</h3></div></section><footer><div class='container'>© Keyboard Sistemas</div></footer></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Tech House | Soluções em Software</title>
+    <!-- Fonte Inter para um visual moderno -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- ESTILOS GERAIS --- */
+        :root {
+            --primaria: #0047AB; /* Azul Cobalto */
+            --primaria-escura: #003380; /* Azul Escuro para Hovers */
+            --branca: #ffffff;
+            --fundo-leve: #f8fafc; /* Cinza muito claro para seções */
+            --texto-principal: #1e293b; /* Cinza escuro para leitura */
+            --texto-secundario: #64748b; /* Cinza médio */
+            --sombra: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transicao: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth; /* Rolagem suave entre âncoras */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--branca);
+            color: var(--texto-principal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transicao);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- BOTÕES --- */
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transicao);
+        }
+
+        .btn-primario {
+            background-color: var(--primaria);
+            color: var(--branca);
+            border: 2px solid var(--primaria);
+        }
+
+        .btn-primario:hover {
+            background-color: var(--primaria-escura);
+            border-color: var(--primaria-escura);
+            transform: translateY(-2px);
+        }
+
+        .btn-secundario {
+            background-color: transparent;
+            color: var(--primaria);
+            border: 2px solid var(--primaria);
+        }
+
+        .btn-secundario:hover {
+            background-color: rgba(0, 71, 171, 0.05);
+        }
+
+        /* --- CABEÇALHO (MENU) --- */
+        header {
+            background-color: var(--branca);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primaria);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--texto-secundario);
+        }
+
+        nav a:hover {
+            color: var(--primaria);
+        }
+
+        /* --- HERO SECTION (BANNER) --- */
+        .hero {
+            background: linear-gradient(135deg, var(--branca) 0%, #e6f0ff 100%);
+            padding: 180px 0 100px; /* Espaço para o menu fixo */
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primaria-escura);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--texto-secundario);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* --- SERVIÇOS (CARDS) --- */
+        .servicos {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            color: var(--primaria);
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--texto-secundario);
+        }
+
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .servico-card {
+            background-color: var(--branca);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transicao);
+        }
+
+        .servico-card:hover {
+            box-shadow: var(--sombra);
+            transform: translateY(-5px);
+            border-color: var(--primaria);
+        }
+
+        .servico-card h3 {
+            font-size: 1.5rem;
+            color: var(--primaria-escura);
+            margin-bottom: 15px;
+        }
+
+        .servico-card p {
+            color: var(--texto-secundario);
+            font-size: 0.95rem;
+        }
+
+        /* --- MÉTRICAS (NÚMEROS) --- */
+        .metricas {
+            background-color: var(--primaria);
+            color: var(--branca);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .metricas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .metrica-item h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .metrica-item p {
+            font-size: 1rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- RODAPÉ (FOOTER) --- */
+        footer {
+            background-color: var(--fundo-leve);
+            padding: 80px 0 30px;
+            color: var(--texto-secundario);
+            font-size: 0.9rem;
+        }
+
+        footer .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-col h4 {
+            color: var(--primaria-escura);
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: var(--primaria);
+            padding-left: 5px;
+        }
+
+        .copy {
+            text-align: center;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            padding-top: 30px;
+        }
+
+        /* --- RESPONSIVIDADE --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.25rem; }
+            nav { display: none; } /* Menu simples para mobile - pode ser melhorado com JS */
+            footer .container { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO E MENU -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">TECH HOUSE</a>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#servicos">O que fazemos</a></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="#contato" class="btn btn-primario">Solicitar Orçamento</a>
+        </div>
+    </header>
+
+    <!-- SEÇÃO HERO (BANNER PRINCIPAL) -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>Desenvolvemos o software que o seu negócio precisa.</h1>
+            <p>De startups a grandes empresas, entregamos soluções tecnológicas sob medida, escaláveis e de alta performance desde 2008.</p>
+            <div class="hero-btns">
+                <a href="#servicos" class="btn btn-primario">Nossas Soluções</a>
+                <a href="#contato" class="btn btn-secundario">Falar com Especialista</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO SERVIÇOS -->
+    <section id="servicos" class="servicos">
+        <div class="container">
+            <div class="section-header">
+                <h2>O Que Fazemos</h2>
+                <p>Nossa expertise abrange todo o ciclo de desenvolvimento de software.</p>
+            </div>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <h3>Outsourcing</h3>
+                    <p>Alocação rápida de profissionais de tecnologia qualificados para integrar seu time ou gerenciar projetos completos.</p>
+                </div>
+                <div class="servico-card">
+                    <h3>Projetos Customizados</h3>
+                    <p>Desenvolvimento de software exclusivo, focado nas dores e objetivos específicos do seu modelo de negócio.</p>
+                </div>
+                <div class="servico-card">
+                    <h3>Aplicativos Móveis</h3>
+                    <p>Criação de apps nativos (iOS/Android) e híbridos com UX/UI moderna e foco na experiência do usuário.</p>
+                </div>
+                <div class="servico-card">
+                    <h3>Consultoria Tech</h3>
+                    <p>Análise de arquitetura, diagnósticos de performance, transformação digital e evolução de sistemas legados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO MÉTRICAS (NÚMEROS) -->
+    <section id="sobre" class="metricas">
+        <div class="container">
+            <div class="metricas-grid">
+                <div class="metrica-item">
+                    <h2>16+</h2>
+                    <p>Anos de Experiência</p>
+                </div>
+                <div class="metrica-item">
+                    <h2>300+</h2>
+                    <p>Clientes Satisfeitos</p>
+                </div>
+                <div class="metrica-item">
+                    <h2>800+</h2>
+                    <p>Projetos Entregues</p>
+                </div>
+                <div class="metrica-item">
+                    <h2>4K+</h2>
+                    <p>Meses em Outsourcing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ E CONTATO -->
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-col">
+                <a href="#" class="logo">TECH HOUSE</a>
+                <p style="margin-top: 15px; max-width: 300px;">Transformando ideias em código robusto e resultados reais.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Links Úteis</h4>
+                <ul>
+                    <li><a href="#servicos">Soluções</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#">Trabalhe Conosco</a></li>
+                    <li><a href="#">Política de Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <ul>
+                    <li>comercial@seusite.com.br</li>
+                    <li>+55 11 99999-9999</li>
+                    <li>São Paulo, SP</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copy container">
+            <p>&copy; 2026 Tech House Soluções em Software. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT SIMPLES PARA COMPORTAMENTO -->
+    <script>
+        // Mudar o fundo do header ao rolar a página
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '10px 0';
+                header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.08)';
+            } else {
+                header.style.padding = '20px 0';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.03)';
+            }
+        });
+    </script>
+</body>
+</html>
